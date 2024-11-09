@@ -1,0 +1,103 @@
+/* General Styling */
+body {
+  background-image: url('home3.jpg'); /* Add your background image */
+  background-size: cover; /* Ensures the image covers the section area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 50px; /* Adds padding inside the section to ensure content doesn't touch edges */
+  border-radius: 15px; /* Optional: Adds rounded corners to the container */
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #0909f3;  /* Dark blue background */
+  color: #f1f1f4;
+}
+
+/* Header and Logo */
+header .logo {
+  display: flex;
+  align-items: center; /* Centers logo and text vertically */
+}
+
+header .logo img {
+  width: 50px; /* Adjust the size of the logo image */
+  height: auto;
+  margin-right: 15px; /* Space between the logo and text */
+}
+
+header .logo h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0; /* Removes margin around the h1 */
+}
+
+/* Upload Container */
+.upload-container {
+  text-align: center;
+  background-color: rgba(0, 47, 219, 0.63);  /* Slightly transparent white */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Heading Styles */
+.upload-container h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.upload-container p {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-top: -10px;
+}
+
+/* Upload Box Styling */
+.upload-box {
+  position: relative;
+  border: 2px dashed rgba(255, 255, 255, 0.5);  /* Dashed border with transparency */
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05); /* Lightened background on hover */
+}
+
+.upload-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);  /* Darker hover effect */
+}
+
+/* Icon Styles */
+.icon {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.upload-box p {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+/* Button Styles */
+button {
+  background-color: #ffffff;  /* White background for button */
+  color: #1c1c3b;  /* Dark blue text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #eeeeee;  /* Light gray hover effect */
+}

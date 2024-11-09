@@ -1,0 +1,551 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the Header Section */
+header {
+    position: fixed; /* Fixes the header to the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width of the page */
+    background-color: #2a6bed; /* Dark background color */
+    color: white; /* Text color */
+    z-index: 1000; /* Keeps the header above other content */
+    padding: 10px 20px; /* Adds some padding inside the header */
+    box-shadow: 0 2px 5px rgb(33, 29, 29); /* Optional: adds a shadow under the header */
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Centers logo and text vertically */
+}
+
+header .logo img {
+    width: 50px; /* Adjust the size of the logo image */
+    height: auto;
+    margin-right: 15px; /* Space between the logo and text */
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0; /* Removes margin around the h1 */
+}
+
+header nav {
+    float: right; /* Aligns the navigation links to the right */
+}
+
+header nav ul {
+    list-style-type: none; /* Removes the default list style */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the navigation items inline */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Space between the navigation items */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets the link color to white */
+    font-size: 1.2em; /* Adjust font size of the links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+header nav ul li a:hover {
+    color: #3498db; /* Changes color of links when hovered */
+}
+
+/* Adds padding to the body content so it doesn't overlap with the fixed header */
+body {
+    padding-top: 80px; /* Adjust this based on your header height */
+}
+
+
+/* .hero Section Styling */
+.hero {
+    position: relative; /* Allows positioning of elements within the hero section */
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    background-image: url('home1.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    color: white; /* Text color for contrast against background */
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: flex-start; /* Align items to the top of the section */
+    align-items: flex-start; /* Align items to the left */
+    padding: 50px; /* Adds padding on the top and sides */
+    box-sizing: border-box; /* Ensures padding does not affect width/height */
+    text-align: left; /* Aligns text to the left */
+}
+
+.hero h1 {
+    font-size: 3em; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero .highlight {
+    color: #0b026e; /* Highlighted text color */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero .big-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Removes underline from the link */
+    margin-top: 20px; /* Adds space between text and button */
+}
+
+.hero .big-button:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for the Cancer Icons Section */
+.cancer-icons {
+    display: flex; /* Align items in a row */
+    justify-content: left; /* Align items to the left horizontally */
+    gap: 20px; /* Space between each cancer option */
+    margin-top: 40px; /* Adds space from the top */
+    flex-wrap: wrap; /* Wrap items to the next line if needed on smaller screens */
+    
+    background-image: url('home2.jpg'); /* Add your background image */
+    background-size: cover; /* Ensures the image covers the section area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 50px; /* Adds padding inside the section to ensure content doesn't touch edges */
+    border-radius: 15px; /* Optional: Adds rounded corners to the container */
+    width: 100%;
+    height: 100vh;
+}
+
+/* Styling for each Cancer Option */
+.cancer-option {
+    width: 200px; /* Fixed width for the cancer option box */
+    height: 200px; /* Fixed height to maintain square shape */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Makes the option look clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.cancer-option:hover {
+    transform: translateY(-10px); /* Lift the box when hovered */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Styling for the image inside the cancer option box */
+.cancer-option img {
+    width: 100px; /* Fixed size for the image */
+    height: 100px; /* Ensure the image stays square */
+    object-fit: cover; /* Cover the box area without distortion */
+    border-radius: 50%; /* Make the image circular */
+}
+
+/* Styling for the text below the image */
+.cancer-option p {
+    margin-top: 10px; /* Adds space between image and text */
+    font-size: 1.2em; /* Adjust font size */
+    color: #0073e6; /* Blue color for the text */
+    font-weight: bold;
+}
+
+
+
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif; /* Sets font for the page */
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px; /* Adds padding around the body */
+    margin: 0; /* Removes default margin */
+}
+
+/* Align the content container to the left */
+.content {
+    max-width: 800px; /* Maximum width for content */
+    margin-left: 20px; /* Left-aligns the content */
+}
+
+/* Title styling (h1) */
+h1 {
+    font-size: 2.5em; /* Makes the title large */
+    color: #333; /* Dark color for title */
+    margin-bottom: 10px; /* Adds some space below the title */
+    text-align: left; /* Aligns the title to the left */
+}
+
+/* Image styling for circular image */
+img {
+    width: 150px; /* Adjust the width of the image */
+    height: 150px; /* Adjust the height to match the width for a circular effect */
+    border-radius: 50%; /* Makes the image circular */
+    cursor: pointer; /* Changes cursor to pointer to show it's clickable */
+    margin-top: 20px; /* Adds space above the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+    transition: transform 0.3s ease; /* Adds a smooth transition effect */
+}
+
+/* Hover effect for the image */
+img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Subtitle styling (h2) */
+h2 {
+    font-size: 1.8em; /* Makes the subtitle slightly smaller than the title */
+    color: #555; /* Light gray color */
+    margin-top: 20px; /* Adds space above the subtitle */
+    text-align: left; /* Aligns the subtitle to the left */
+}
+
+
+
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.service-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.service-card button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.service-card button:hover {
+    background-color: #2980b9;
+}
+/* Styling for the About Us Section */
+#about {
+    background-image: url('about.jpg'); /* Add the background image */
+    background-size: cover; /* Ensure the background image covers the whole section */
+    background-position: center; /* Position the background image at the center */
+    padding: 50px 20px; /* Add padding around the section */
+    color: #fff; /* Text color (make it white to contrast with the background) */
+    text-align: center; /* Center text horizontally */
+    width: 100%;
+    height: 100vh;
+}
+
+.content-wrapper {
+    max-width: 900px; /* Max width for content */
+    margin: 0 auto; /* Centers the content in the middle of the page */
+    background-color: #ffffff; /* White background for content */
+    padding: 30px; /* Adds padding inside the content */
+    border-radius: 10px; /* Rounded corners for the content box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for the content box */
+}
+
+/* Title Styling */
+#about h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+/* Paragraph Styling */
+#about p {
+    font-size: 1.2em;
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 40px; /* Adds margin at the bottom */
+}
+
+/* About Details Container */
+.about-details {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly between sections */
+    gap: 30px; /* Space between mission and team sections */
+    flex-wrap: wrap; /* Wraps to the next line on smaller screens */
+}
+
+/* Mission and Team Section Styling */
+.mission, .team {
+    flex: 1;
+    min-width: 300px; /* Ensures minimum width for the sections */
+    background-color: #fafafa; /* Light background for the mission/team */
+    padding: 20px; /* Padding inside the sections */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+.mission h3, .team h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color for headings */
+}
+
+.mission p, .team p {
+    font-size: 1em;
+    color: #555; /* Lighter text color for descriptions */
+    line-height: 1.6; /* Line spacing for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column; /* Stack the mission and team sections on smaller screens */
+        align-items: center; /* Center align the sections */
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column; /* Stack mission and team sections vertically on smaller screens */
+    }
+}
+
+/* Styling for the Doctors Section */
+#doctor {
+    padding: 50px 20px; /* Adds padding to the section */
+    background-color: #f4f4f4; /* Light background color */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Make the section a flex container */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Horizontally center the content */
+    justify-content: center; /* Vertically center the content */
+    min-height: 100vh; /* Ensures the section takes full viewport height */
+}
+
+/* Title Styling */
+#doctor h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333; /* Ensures the title is clearly visible */
+}
+
+/* Container for Doctor Cards */
+.doctor-list {
+    display: flex;
+    justify-content: center; /* Centers the doctor cards horizontally */
+    flex-wrap: wrap; /* Ensures the cards wrap to new lines on smaller screens */
+    gap: 20px; /* Adds spacing between the cards */
+}
+
+/* Doctor Card Styling */
+.doctor-card {
+    background-color: #fff; /* White background for cards */
+    width: 250px; /* Fixed width for each card */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around card */
+    text-align: center; /* Center text inside each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly when hovered */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Doctor Image Styling */
+.doctor-card img {
+    width: 100%; /* Makes the image fill the width of the card */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Doctor Name Styling */
+.doctor-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+}
+
+/* Doctor Specialty Styling */
+.doctor-card p {
+    font-size: 1em;
+    color: #555; /* Lighter text color for description */
+}
+#appointment {
+    margin-top: 80px; /* Adjusts content below the fixed header */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.appointment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-container h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.appointment-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-group button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #2980b9;
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
